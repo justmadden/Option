@@ -1,0 +1,470 @@
+// imports
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800')
+
+// coloros
+
+$darkgray : #222222
+$grey: #8b8b8b
+$lightgray: #e8e8e8
+$black: #131313
+$red : #df3f3f
+$pink : #ffb1b1
+$lightpink: #ffb1b1
+$white: #ffffff
+$blue: #0182da
+//fonts
+=Raleway($w:400)
+  font-family: "Raleway",sans-serif
+  font-weight: $w
+
+=OpenSans
+  font-family: "Open Sans",sans-serif
+
+//default font-size 14px
+
+html
+  font-size: 14px
+
+.flex
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+
+
+.flex2
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 100%
+
+
+.header
+  border-top: 0.7rem solid $red
+  background-color: $black
+  height: 100vh
+  color: $white
+  text-align: center
+  &-nav
+    display: flex
+    justify-content: space-between
+    padding-top: 1rem
+    width: 100%
+    &-log
+      padding-top: 1rem
+    &-list
+      display: inline-block
+      button
+        font-size: 1.5rem
+        outline: none
+        height: 6rem
+      &-ul
+        list-style-type: none
+        display: inline-flex
+        justify-content: space-around
+        li
+          list-style-type: none
+          display: inline-block
+          margin: 1rem
+          a
+            color: $lightgray
+            +Raleway
+            font-size: 1rem
+      &_btn
+        background: transparent
+        border: none
+  &-caption
+    //margin-top: 18rem
+    +OpenSans
+    font-size: 2.9rem
+  &-subtitle
+    +Raleway
+    font-size: .8rem
+  &-scroll-text
+    margin-top: 10rem
+    a
+      +Raleway(700)
+      text-transform: uppercase
+      color: $white
+    a:hover,a:focus
+      text-decoration: none
+  &-lightblue
+    background-color: #018ada
+  &-pink
+    background-color: #e95c93
+  &-blue
+    background-color: #3c5a98
+  &-red
+    background-color: #d13f3f
+  &-icons
+    width: 100%
+    align-self: flex-end
+    display: flex
+    justify-content: space-around
+    align-items: stretch
+    &-item
+      width: 25%
+      padding: 1.5rem 1rem
+      color: $white
+      &:hover
+        opacity: .8
+        color: $white
+.about
+  padding-top: 7rem
+  padding-bottom: 7rem
+  background-color: $darkgray
+  img
+    margin: 0 auto
+  &-phones
+    margin-top: 5rem
+  &-caption
+    letter-spacing: 0.3rem
+    color: $white
+    +OpenSans
+    text-align: center
+    font-size: 2rem
+  &-subtitle
+    text-align: center
+    color: $grey
+    font-style: italic
+    margin-bottom: 0rem
+    +Raleway
+  &-subtitle2
+    color: $red
+    font-style: italic
+    +Raleway
+    text-align: center
+    margin-bottom: 4rem
+  &-text
+    color: $lightgray
+    +Raleway
+    &-strong
+      +Raleway(700)
+      color: $white
+  &-items
+    &-redblock
+      width: 3rem
+      height: 3rem
+      background: $red
+      margin-top: 1rem
+    &-caption
+      margin-top: 1rem
+      color: $white
+      +Raleway(700)
+      margin-bottom: 1.5rem
+    &-text
+      +Raleway()
+      color: $lightgray
+      margin-bottom: 2rem
+
+
+
+
+.skills
+  padding-top: 6rem
+  padding-bottom: 6rem
+  background: $red
+  text-align: center
+  &-caption
+    +OpenSans
+    color: $white
+    font-size: 2.2rem
+    text-transform: uppercase
+    letter-spacing: 0.3rem
+  &-subtitle
+    +Raleway
+    color: $lightpink
+    font-size: 1rem
+    font-style: italic
+    margin-bottom: 0
+  &-subtitle2
+    +Raleway
+    color: $white
+    font-style: italic
+  &-pencil
+    margin-top: 4rem
+    img
+      margin: 1rem auto
+  &-items
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    &-item
+      margin-top: 2rem
+      width: 100%
+      padding: 7rem 1rem 3rem 1rem
+      border: 0.1rem solid $lightpink
+      text-align: center
+      &-caption
+        font-size: 1.7rem
+        +OpenSans
+        color: $white
+        text-transform: uppercase
+        letter-spacing: 0.2rem
+      &-text
+        +Raleway
+        color: $white
+
+
+.contact
+  padding-top: 7rem
+  padding-bottom: 7rem
+  background: $red
+  &-caption
+    +OpenSans
+    font-size: 2rem
+    letter-spacing: 0.3rem
+    color: $white
+    text-transform: uppercase
+    text-align: center
+  &-subtitle
+    +Raleway
+    font-style: italic
+    color: $lightpink
+    margin-bottom: 0
+    text-align: center
+  &-subtitle2
+    +Raleway
+    color: $white
+    margin-bottom: 5rem
+    text-align: center
+    font-style: italic
+  &-info
+    +Raleway
+    color: $white
+    &:last-child .contact-info-item
+      padding-top: 2rem
+    &-item
+      padding-top: 1.2rem
+      padding-bottom: 3rem
+  input
+    background: $lightpink
+    color: $red
+    padding: 1.2rem 1rem
+    width: 100%
+    border: none
+    margin-bottom: 2rem
+    &:focus
+      outline: none
+      border: none
+  &-checkbox
+    background: $red
+    width: 1rem
+    height: 1rem
+    border: .14rem solid $white
+    margin-bottom: 2rem
+    text-align: center
+    font-size: 0.6rem
+    color: $white
+    display: inline-block
+    margin: 0
+    margin-right: .2rem
+  &-checkbox-text
+    color: $lightpink
+    margin-top: 1rem
+    margin-bottom: 1rem
+  &-btn
+    width: 100%
+    border: .2rem solid $white
+    padding: .5rem 0
+    color: $white
+    text-align: center
+    +Raleway(700)
+    background: transparent
+    letter-spacing: 0.2rem
+    text-transform: uppercase
+  textarea
+    background: $lightpink
+    color: $red
+    padding: 2rem 1rem
+    width: 100%
+    outline: none
+    border: none
+    height: 100%
+    &:focus
+      outline: none
+      border: none
+
+
+.gallery
+  padding-top: 6rem
+  background: $darkgray
+  &-container
+    padding: 0
+  &-caption
+    +OpenSans
+    font-size: 2rem
+    letter-spacing: 0.3rem
+    color: $white
+    text-transform: uppercase
+    text-align: center
+  &-subtitle
+    +Raleway
+    font-style: italic
+    color: $grey
+    margin-bottom: 0
+    text-align: center
+  &-subtitle2
+    +Raleway
+    color: $red
+    margin-bottom: 5rem
+    text-align: center
+    font-style: italic
+  &-btns
+    margin-bottom: 4rem
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &-dropdown
+      .dropdown-menu
+        width: 20rem
+        border: 1px solid $red
+        color: $white
+        background: $red
+        margin-top: -0.5rem
+        border-radius: 0
+
+      .dropdown-menu>li>a
+        +Raleway(700)
+        letter-spacing: 0.2rem
+      .dropdown-menu>li>a:hover
+        background: $red
+        color: $white
+      button
+        +Raleway(700)
+        background: transparent
+        color: $white
+        text-transform: uppercase
+        letter-spacing: 0.2rem
+        padding: .5rem .2rem
+        text-align: center
+        width: 20rem
+        border: 1px solid $red
+        border-radius: 0
+        margin-right: 1rem
+        position: relative
+        .caret
+          text-align: right
+          color: $red
+          position: absolute
+          right: 1rem
+          top: 1.1rem
+          transform: scale(1.6)
+        &:hover,&:focus
+          color: $white
+          background: $red
+          .caret
+            color: $white
+    &-link
+      +Raleway(700)
+      background: transparent
+      color: $white
+      text-transform: uppercase
+      letter-spacing: 0.2rem
+      padding: .5rem 0rem
+      text-align: center
+      width: 20rem
+      border: 1px solid $blue
+      border-radius: 0
+      margin-left: 1rem
+      &:hover,&:focus
+        color: $white
+        background: $blue
+
+  &-items
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    &-item
+      width: 50%
+      height: 16rem
+      position: relative
+      &:hover &_overlay
+        height: 100%
+      img
+        width: 100%
+        height: 16rem
+        display: block
+      &_overlay
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(0, 0, 0, 0.63)
+        overflow: hidden
+        width: 100%
+        height: 0%
+        transition: .5s ease
+      &_text
+        +Raleway
+        white-space: nowrap
+        color: white
+        font-size: 20px
+        position: absolute
+        overflow: hidden
+        width: 80%
+        height: 80%
+        top: 50%
+        left: 50%
+        border: 1px solid $white
+        vertical-align: middle
+        text-align: center
+        padding: 5.5rem 2rem
+        padding-bottom: 4rem
+        transform: translate(-50%, -50%)
+        -ms-transform: translate(-50%, -50%)
+
+.dotstyle li
+  width: 1.5rem
+  height: 1.5rem
+
+
+
+
+
+
+@media(max-width: 420px)
+  .header-nav-list-ul li
+    margin-left: .5rem
+    margin-right: .5rem
+  .header-nav-list button
+    font-size: 1rem
+  .header-scroll-text
+    margin-top: 5rem
+
+@media(max-width: 340px)
+  .header-nav-list-ul li
+    margin-left: .2rem
+    margin-right: .2rem
+
+@media(min-width: 900px)
+  .gallery
+    &-items
+      &-item
+        width: 25%
+
+
+@media(max-width: 600px)
+  .gallery-btns-dropdown button
+    margin: 0
+    margin-bottom: 2rem
+  .gallery-btns-dropdown .dropdown-menu
+    margin-top: -2rem
+
+  .gallery-btns-link
+    margin-bottom: 2rem
+@media(max-width: 577px)
+  .gallery-btns-link
+    margin: 0
+
+
+@media(min-width: 700px)
+  .skills
+    &-items
+      justify-content: space-between
+      flex-direction: row
+      &-item
+        margin-top: 2rem
+        width: 30%
