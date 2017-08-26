@@ -46,6 +46,11 @@ html
   height: 100vh
   color: $white
   text-align: center
+  background-image: url('../img/header-bg.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
   &-nav
     display: flex
     justify-content: space-between
@@ -207,87 +212,6 @@ html
         +Raleway
         color: $white
 
-
-.contact
-  padding-top: 7rem
-  padding-bottom: 7rem
-  background: $red
-  &-caption
-    +OpenSans
-    font-size: 2rem
-    letter-spacing: 0.3rem
-    color: $white
-    text-transform: uppercase
-    text-align: center
-  &-subtitle
-    +Raleway
-    font-style: italic
-    color: $lightpink
-    margin-bottom: 0
-    text-align: center
-  &-subtitle2
-    +Raleway
-    color: $white
-    margin-bottom: 5rem
-    text-align: center
-    font-style: italic
-  &-info
-    +Raleway
-    color: $white
-    &:last-child .contact-info-item
-      padding-top: 2rem
-    &-item
-      padding-top: 1.2rem
-      padding-bottom: 3rem
-  input
-    background: $lightpink
-    color: $red
-    padding: 1.2rem 1rem
-    width: 100%
-    border: none
-    margin-bottom: 2rem
-    &:focus
-      outline: none
-      border: none
-  &-checkbox
-    background: $red
-    width: 1rem
-    height: 1rem
-    border: .14rem solid $white
-    margin-bottom: 2rem
-    text-align: center
-    font-size: 0.6rem
-    color: $white
-    display: inline-block
-    margin: 0
-    margin-right: .2rem
-  &-checkbox-text
-    color: $lightpink
-    margin-top: 1rem
-    margin-bottom: 1rem
-  &-btn
-    width: 100%
-    border: .2rem solid $white
-    padding: .5rem 0
-    color: $white
-    text-align: center
-    +Raleway(700)
-    background: transparent
-    letter-spacing: 0.2rem
-    text-transform: uppercase
-  textarea
-    background: $lightpink
-    color: $red
-    padding: 2rem 1rem
-    width: 100%
-    outline: none
-    border: none
-    height: 100%
-    &:focus
-      outline: none
-      border: none
-
-
 .gallery
   padding-top: 6rem
   background: $darkgray
@@ -416,6 +340,94 @@ html
         transform: translate(-50%, -50%)
         -ms-transform: translate(-50%, -50%)
 
+
+
+
+.contact
+  padding-top: 7rem
+  padding-bottom: 7rem
+  background: $red
+  &-caption
+    +OpenSans
+    font-size: 2rem
+    letter-spacing: 0.3rem
+    color: $white
+    text-transform: uppercase
+    text-align: center
+  &-subtitle
+    +Raleway
+    font-style: italic
+    color: $lightpink
+    margin-bottom: 0
+    text-align: center
+  &-subtitle2
+    +Raleway
+    color: $white
+    margin-bottom: 5rem
+    text-align: center
+    font-style: italic
+  &-info
+    +Raleway
+    color: $white
+    &:last-child .contact-info-item
+      padding-top: 2rem
+    &-item
+      padding-top: 1.2rem
+      padding-bottom: 3rem
+  input
+    background: $lightpink
+    color: $red
+    padding: 1.2rem 1rem
+    width: 100%
+    border: none
+    margin-bottom: 2rem
+    &:focus
+      outline: none
+      border: none
+  &-checkbox
+    background: $red
+    width: 1rem
+    height: 1rem
+    border: .14rem solid $white
+    margin-bottom: 2rem
+    text-align: center
+    font-size: 0.6rem
+    color: $white
+    display: inline-block
+    margin: 0
+    margin-right: .2rem
+  &-checkbox-text
+    color: $lightpink
+    margin-top: 1rem
+    margin-bottom: 1rem
+  &-btn
+    width: 100%
+    border: .2rem solid $white
+    padding: .5rem 0
+    color: $white
+    text-align: center
+    +Raleway(700)
+    background: transparent
+    letter-spacing: 0.2rem
+    text-transform: uppercase
+    &:hover
+      color: $red
+      background: $white
+  textarea
+    background: $lightpink
+    color: $red
+    padding: 2rem 1rem
+    width: 100%
+    outline: none
+    border: none
+    height: 100%
+    &:focus
+      outline: none
+      border: none
+
+
+
+
 .dotstyle li
   width: 1.5rem
   height: 1.5rem
@@ -438,6 +450,14 @@ html
   .header-nav-list-ul li
     margin-left: .2rem
     margin-right: .2rem
+    a
+      font-size: 0.8rem
+  .header-scroll-text
+    margin-top: 1rem
+  .gallery
+    &-items
+      &-item
+        width: 100%
 
 @media(min-width: 900px)
   .gallery
@@ -445,7 +465,10 @@ html
       &-item
         width: 25%
 
-
+@media(max-width: 764px)
+  .contact-info-item
+    text-align: center
+    font-size: 1.5rem
 @media(max-width: 600px)
   .gallery-btns-dropdown button
     margin: 0
