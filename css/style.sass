@@ -118,6 +118,7 @@ html
   padding-top: 7rem
   padding-bottom: 7rem
   background-color: $darkgray
+  font-size: 1rem
   img
     margin: 0 auto
   &-phones
@@ -427,16 +428,48 @@ html
 
 
 
-.dotstyle li
-  width: 1.5rem
-  height: 1.5rem
+.preloader
+  position: fixed
+  width: 100%
+  height: 100vh
+  background: $red
+  top: 0
+  left: 0
+  z-index: 10
+  font-size: 20rem
+  &-loader
+    letter-spacing: 2rem
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    line-height: 18rem
+    &-smallspace
+      letter-spacing: 1rem
+    p
+      text-align: center
+      color: $white
+      +OpenSans
 
 
 
+@media(min-height: 1200px) and (min-width: 2100px)
+  html
+    font-size: 19px
 
-
-
+@media(min-height: 1025px)
+  .contact,.skills
+    padding-top: 20rem
+  .about
+    padding-top: 16rem
+  .gallery-items-item,.gallery-items-item img
+    height: 20rem
+  .gallery-items-item_text
+    padding-top: 6.5rem
 @media(max-width: 420px)
+  .preloader-loader
+    font-size: 10rem
+    line-height: 9rem
   .header-nav-list-ul li
     margin-left: .5rem
     margin-right: .5rem
@@ -463,6 +496,7 @@ html
     &-items
       &-item
         width: 25%
+
 
 @media(max-width: 764px)
   .contact-info-item

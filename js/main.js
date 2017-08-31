@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+
+    setTimeout(function () {
+      $('#page-preloader').animate({opacity:0},1000,function () {
+        $(this).css('display','none');
+      });
+    },600);
+
   $('a[href^="#"]').click(function () {
 
       var elementClick=$(this).attr("href");
